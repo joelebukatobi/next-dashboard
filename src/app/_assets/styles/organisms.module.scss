@@ -1,0 +1,30 @@
+// div[aria-label='modal-bg'] {
+//   @apply fixed inset-0 bg-gray-900/90;
+// }
+
+// div[aria-label='modal'] {
+//   @apply fixed inset-0 z-50 flex items-center justify-center;
+
+//   & section {
+//     @apply w-full max-w-[50%] max-h-[75%] mx-auto bg-white rounded-lg px-[1.6rem] pb-[1.6rem] overflow-y-scroll relative;
+//     & header {
+//       @apply flex justify-between sticky w-full top-0 bg-white z-[100]  py-[1.6rem] border-b-[.1rem] mb-[2.4rem];
+//       //
+//       & svg {
+//         @apply h-[2.4rem] w-[2.4rem] stroke-gray-500 hover:stroke-red-600 cursor-pointer;
+//       }
+//       //
+//       & h4 {
+//         @apply font-semibold text-gray-900;
+//       }
+//     }
+
+//     & p {
+//       @apply text-gray-800;
+//     }
+
+//     // & hr {
+//     //   @apply h-[.1rem] border-none outline-none bg-gray-200 mt-[7.2rem] mb-[2.4rem];
+//     // }
+//   }
+// }

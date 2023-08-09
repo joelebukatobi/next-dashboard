@@ -1,0 +1,17 @@
+// Tailwind
+@import 'tailwindcss/base';
+@import 'tailwindcss/utilities';
+@import 'tailwindcss/components';
+
+// Main
+@import 'base.module';
+@import 'typography.module';
+@import 'atoms.module';
+@import 'molecules.module';
+@import 'organisms.module';
+
+// Dashboard
+@import 'admin.module';
+
+// App
+@import 'app.module';

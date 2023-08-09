@@ -1,0 +1,238 @@
+// Card
+.card {
+  @apply rounded-xl p-[1.6rem] shadow-sm w-1/3 bg-white;
+  & a {
+    @apply relative flex items-start justify-between;
+  }
+
+  & div {
+    @apply pt-[1.6rem];
+
+    & svg {
+      @apply h-[3.2rem] w-[3.2rem] stroke-blue-600 stroke-[1.5];
+    }
+
+    & h5 {
+      @apply mt-4 font-bold text-gray-900;
+    }
+
+    & p {
+      @apply text-gray-800 mt-2 hidden sm:block;
+    }
+  }
+  & span {
+    @apply rounded-full bg-blue-50 px-[.8rem] py-[.4rem] text-[1.4rem] font-medium text-blue-600;
+  }
+}
+
+// Input Group
+div[aria-label='input-group'] {
+  // @apply border-2 border-red-600;
+  & label {
+    @apply capitalize;
+  }
+  //
+  & div {
+    //
+    & input {
+      @apply w-full;
+      //
+    }
+    //
+    & button[type='button'],
+    & button {
+      @apply rounded-[.4rem] bg-[unset] hover:bg-transparent border-transparent p-0 border-2 absolute inset-y-0 end-[1.6rem] grid place-content-center;
+      //
+      & svg {
+        @apply h-[2rem] w-[2rem] stroke-gray-400 hover:stroke-blue-600;
+      }
+    }
+  }
+
+  & span {
+    @apply text-[1.4rem] font-medium text-red-600;
+  }
+}
+// Form Group
+div[aria-label='form-row'] {
+  @apply flex gap-x-[1.6rem] justify-between;
+  //
+  & div[aria-label='input-group'] {
+    @apply w-full;
+    & label {
+      @apply not-sr-only mb-[.8rem];
+    }
+  }
+}
+
+// Button Row
+div[aria-label='button-row'] {
+  @apply flex space-x-[1.6rem];
+
+  & button:first-of-type {
+    @apply bg-red-500 border-red-500 hover:bg-red-600 hover:border-red-600;
+  }
+}
+
+// Drowdown
+.dropdown {
+  //
+  &_button {
+    all: unset;
+    @apply bg-[unset] border-transparent w-[unset] p-0 h-[unset] gap-0 border-2 border-red-600 cursor-pointer;
+    //
+    & svg {
+      @apply h-[2.8rem] w-[2.8rem] fill-blue-600;
+    }
+    //
+
+    & img {
+      @apply h-[5.6rem] w-[5.6rem] rounded-[100%];
+    }
+    &:hover {
+      @apply hover:bg-transparent hover:border-0 border-transparent gap-0;
+    }
+  }
+  //
+  &_content {
+    @apply bg-white rounded-[.4rem] px-[.8rem] py-[1.6rem] shadow-md;
+
+    &[data-side='top'] {
+      -webkit-animation-name: slideDownAndFade;
+      animation-name: slideDownAndFade;
+    }
+
+    &[data-side='right'] {
+      -webkit-animation-name: slideLeftAndFade;
+      animation-name: slideLeftAndFade;
+    }
+
+    &[data-side='bottom'] {
+      -webkit-animation-name: slideUpAndFade;
+      animation-name: slideUpAndFade;
+    }
+
+    &[data-side='left'] {
+      -webkit-animation-name: slideRightAndFade;
+      animation-name: slideRightAndFade;
+    }
+  }
+  //
+  &_item,
+  &_checkmark,
+  &_radio {
+    @apply text-[1.4rem] rounded-[.24rem] flex items-center justify-between h-[2.4rem] px-[.8rem] relative select-none outline-none pl-[.8rem];
+
+    & svg {
+      @apply h-[1.2rem] w-[1.2rem];
+    }
+
+    &:hover {
+      @apply bg-blue-600 text-white;
+    }
+  }
+
+  &_label {
+    @apply pl-[2.4rem] text-[1.2rem] leading-[2.4rem] text-gray-300;
+  }
+
+  &_separator {
+    @apply h-[.1rem] bg-gray-300 m-[.4rem];
+  }
+
+  &_indicator {
+    @apply absolute left-0 w-[2.4rem] h-[2.4rem]  inline-flex items-center justify-center;
+  }
+
+  &_arrow {
+    @apply fill-blue-600;
+  }
+
+  @-webkit-keyframes slideUpAndFade {
+    from {
+      opacity: 0;
+      transform: translateY(2px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideUpAndFade {
+    from {
+      opacity: 0;
+      transform: translateY(2px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @-webkit-keyframes slideRightAndFade {
+    from {
+      opacity: 0;
+      transform: translateX(-2px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideRightAndFade {
+    from {
+      opacity: 0;
+      transform: translateX(-2px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @-webkit-keyframes slideDownAndFade {
+    from {
+      opacity: 0;
+      transform: translateY(-2px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideDownAndFade {
+    from {
+      opacity: 0;
+      transform: translateY(-2px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @-webkit-keyframes slideLeftAndFade {
+    from {
+      opacity: 0;
+      transform: translateX(2px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideLeftAndFade {
+    from {
+      opacity: 0;
+      transform: translateX(2px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
