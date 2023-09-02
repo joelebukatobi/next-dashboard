@@ -1,26 +1,28 @@
 // 'use client';
 // //
 import React from 'react';
-import * as Form from '@radix-ui/react-form';
+import { Input } from '@/_components/admin/atoms/Input';
 import { Button } from '@/_components/admin/atoms/Button';
+import { Label } from '@/_components/admin/atoms/Label';
 
-export const InputGroup = ({ name, placeholder, icon, value, type, id, required }) => {
+export const InputGroup = ({ name, placeholder, icon, value, type, id, required, label }) => {
   return (
-    <Form.Field aria-label="input-group" name={name}>
-      <Form.Label htmlFor={name}>{name}</Form.Label>
-      <div className="relative">
-        <Form.Control asChild>
-          <input type={type} name={name} value={value} placeholder={placeholder} id={id} required={required} />
-        </Form.Control>
-
-        <Button type="button">{icon}</Button>
+    <div aria-label="input-group">
+      <Label htmlFor="hs-trailing-icon" class="block text-sm font-medium mb-2 dark:text-white">
+        {label}
+      </Label>
+      <div>
+        <Input
+          name={name}
+          placeholder={placeholder}
+          icon={icon}
+          value={value}
+          type={type}
+          id={id}
+          required={required}
+        />
+        <Button>{icon}</Button>
       </div>
-      <Form.Message className="FormMessage" match="valueMissing">
-        Please enter your {name}
-      </Form.Message>
-      <Form.Message className="FormMessage" match="typeMismatch">
-        Please provide a valid {name}
-      </Form.Message>
-    </Form.Field>
+    </div>
   );
 };

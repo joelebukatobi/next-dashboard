@@ -1,0 +1,97 @@
+.admin {
+  // Sidebar
+  &_sidebar {
+    //
+    @apply w-[20%] h-full bg-gray-950 fixed left-0;
+    // Logo
+    &-logo {
+      @apply h-[10%] xl:h-[8%] pl-[1.6rem] w-full flex  items-center text-white border-b-[.1rem] border-blue-100/5;
+      & svg {
+        @apply h-[4rem] w-[4rem];
+      }
+      & h5 {
+        @apply font-semibold;
+      }
+    }
+    // Navigation
+    &-nav {
+      @apply flex flex-col justify-between p-[1.6rem] relative h-[90%] xl:h-[92%];
+      //
+      & div[aria-label='main-nav'] {
+        @apply flex flex-col;
+        //
+        & nav {
+          @apply w-full flex flex-col flex-wrap;
+          //
+          & ul[aria-label='nav-list'] {
+            //
+            @apply space-y-[1.6rem];
+            & li {
+              //
+              @apply mt-[.8rem] cursor-pointer;
+              & a {
+                //
+                @apply flex items-center gap-x-[1.6rem] text-[1.4rem] text-white/70;
+                //
+                & svg {
+                  //
+                  @apply h-[2.4rem] w-[2.4rem];
+                  //
+                }
+
+                & .chevron-down {
+                  @apply h-[1.6rem] w-[1.6rem] ml-auto;
+                }
+                //
+                &:hover {
+                  @apply text-white;
+                }
+              }
+            }
+          }
+
+          & ul[aria-label='list-menu'] {
+            //
+            & hr {
+              @apply h-[.1rem] mt-[.8rem] bg-blue-100/5 outline-none border-none;
+            }
+            & li {
+              & a {
+              }
+            }
+          }
+        }
+      }
+
+      & div[aria-label='main-logout'] {
+        //
+        & ul[aria-label='nav-list'] {
+          //
+          @apply space-y-[1.6rem];
+          & li {
+            //
+            @apply mt-[.8rem];
+            & a {
+              //
+              @apply flex items-center gap-x-[1.6rem] text-[1.4rem] text-white/70;
+              //
+              & svg {
+                //
+                @apply h-[2.4rem] w-[2.4rem];
+                //
+              }
+
+              & .chevron-down {
+                @apply h-[1.6rem] w-[1.6rem] ml-auto;
+              }
+              //
+              &:hover {
+                @apply text-white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

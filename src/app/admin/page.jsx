@@ -1,49 +1,21 @@
-import { HashtagIcon, PencilSquareIcon, Square3Stack3DIcon, UsersIcon } from '@heroicons/react/24/outline';
+import { Card } from '@/_components/admin/molecules/Card';
+import { DocumentTextIcon, Square3Stack3DIcon, TagIcon, UsersIcon } from '@heroicons/react/24/solid';
+import { PencilSquareIcon } from '@heroicons/react/24/outline';
 
 export default function Index() {
   return (
     <>
-      <div aria-label="body-card-row">
-        <div className="card">
-          <a href="/posts.html">
-            <div>
-              <PencilSquareIcon />
-              <h5>12 Posts</h5>
-              <p>Unleash creative content.</p>
-            </div>
-            <span> 01 </span>
-          </a>
-        </div>
-        <div className="card">
-          <a href="/categories.html">
-            <div>
-              <Square3Stack3DIcon />
-              <h5>5 Categories</h5>
-              <p>Organize like a pro.</p>
-            </div>
-            <span> 02 </span>
-          </a>
-        </div>
-        <div className="card">
-          <a href="/tags.html">
-            <div>
-              <HashtagIcon />
-              <h5>8 Tags</h5>
-              <p>Connect the dots effortlessly.</p>
-            </div>
-            <span> 03 </span>
-          </a>
-        </div>
-        <div className="card">
-          <a href="/users.html">
-            <div>
-              <UsersIcon />
-              <h5>3 Users</h5>
-              <p>Collaborate and conquer.</p>
-            </div>
-            <span> 04</span>
-          </a>
-        </div>
+      <div aria-label="body-row">
+        <Card href="/" icon={<DocumentTextIcon />} heading="12 Posts" caption="Unleash creative content" number="01" />
+        <Card
+          href="/"
+          icon={<Square3Stack3DIcon />}
+          heading="5 Categories"
+          caption="Unleash creative content"
+          number="01"
+        />
+        <Card href="/" icon={<TagIcon />} heading="8 Tags" caption="Organize like a pro." number="03" />
+        <Card href="/" icon={<UsersIcon />} heading="3 Users" caption="Collaborate and conquer." number="04" />
       </div>
       <header>
         <nav>

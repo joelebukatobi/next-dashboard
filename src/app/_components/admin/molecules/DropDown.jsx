@@ -1,61 +1,39 @@
 import React from 'react';
+// Next
+import Link from 'next/link';
 //
 import { Button } from '@/_components/admin/atoms/Button';
-//
-import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
-//
-import { BellAlertIcon, CheckIcon } from '@heroicons/react/24/outline';
-import { BellIcon, UserIcon } from '@heroicons/react/24/solid';
 
-export const DropDown = ({ children, icon, image }) => {
-  const [bookmarksChecked, setBookmarksChecked] = React.useState(true);
-  const [urlsChecked, setUrlsChecked] = React.useState(false);
-  const [person, setPerson] = React.useState('pedro');
-
+export const DropDown = ({ className, options, text, icon, image }) => {
   return (
-    <DropdownMenu.Root className="dropdown">
-      <DropdownMenu.Trigger asChild>
-        <button className="dropdown_button">{icon ? icon : image}</button>
-      </DropdownMenu.Trigger>
+    <div aria-label="dropdown" className="hs-dropdown relative inline-flex">
+      <Button
+        className={`${className} hs-dropdown-toggle`}
+        id="hs-dropdown-default"
+        type="button"
+        icon={icon ? icon : image}
+      >
+        {text}
+      </Button>
 
-      <DropdownMenu.Portal>
-        <DropdownMenu.Content className="dropdown_content" sideOffset={5}>
-          {children}
-
-          {/* <DropdownMenu.Separator className="dropdown_separator" />
-
-          <DropdownMenu.CheckboxItem
-            className="dropdown_checkmark"
-            checked={bookmarksChecked}
-            onCheckedChange={setBookmarksChecked}
-          >
-            <DropdownMenu.Item className="dropdown_indicator">
-              <CheckIcon />
-            </DropdownMenu.Item>
-            Show Bookmarks
-          </DropdownMenu.CheckboxItem>
-
-          <DropdownMenu.Separator className="dropdown_separator" />
-
-          <DropdownMenu.Label className="DropdownMenuLabel dropdown_label">People</DropdownMenu.Label>
-          <DropdownMenu.RadioGroup value={person} onValueChange={setPerson}>
-            <DropdownMenu.RadioItem className="dropdown_radio" value="pedro">
-              <DropdownMenu.ItemIndicator className="dropdown_indicator">
-                <UserIcon />
-              </DropdownMenu.ItemIndicator>
-              Pedro Duarte
-            </DropdownMenu.RadioItem>
-            <DropdownMenu.RadioItem className="dropdown_radio" value="colm">
-              <DropdownMenu.ItemIndicator className="dropdown_indicator">
-                <UserIcon />
-              </DropdownMenu.ItemIndicator>
-              Colm Tuite
-            </DropdownMenu.RadioItem>
-          </DropdownMenu.RadioGroup> */}
-
-          <DropdownMenu.Arrow className="DropdownMenuArrow dropdown_arrow" />
-        </DropdownMenu.Content>
-      </DropdownMenu.Portal>
-    </DropdownMenu.Root>
+      <ul
+        className="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] hs-dropdown-open:opacity-100 opacity-0 w-[8rem] hidden z-10 min-w-[16rem] bg-white shadow-md rounded-[.4rem] p-[.8rem]"
+        aria-labelledby="hs-dropdown-default"
+      >
+        {options && (
+          <>
+            {options.map((item, index) => (
+              <>
+                <li key={index} href={item.href}>
+                  {item.icon}
+                  {item.text}
+                </li>
+                <hr />
+              </>
+            ))}
+          </>
+        )}
+      </ul>
+    </div>
   );
 };

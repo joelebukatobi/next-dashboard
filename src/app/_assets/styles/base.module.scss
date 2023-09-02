@@ -3,10 +3,10 @@
 
 // Font Variables //
 // ---------------------------------------------------------------------//
-
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
 $font-primary: 'Fira Sans Condensed', sans-serif;
 
+// Body
 body::-webkit-scrollbar {
   width: 0.5rem;
   &:hover {

@@ -1,18 +1,20 @@
 'use client';
+//
 import React from 'react';
 // Next
 import Image from 'next/image';
-
-//
-import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
-//
+// Components
 import ProfilePicture from '@/_assets/images/dashboard-profile.png';
 import { InputGroup } from '@/_components/admin/molecules/InputGroup';
 import { DropDown } from '@/_components/admin/molecules/DropDown';
-
-//
-import * as Form from '@radix-ui/react-form';
-import { BellAlertIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline';
+// HeroIcons
+import {
+  MagnifyingGlassIcon,
+  BellIcon,
+  ArrowLeftOnRectangleIcon,
+  Cog8ToothIcon,
+  UserIcon,
+} from '@heroicons/react/24/outline';
 //
 
 export const Header = () => {
@@ -30,23 +32,29 @@ export const Header = () => {
         </li>
       </ul>
       <div aria-label="header-search">
-        <div aria-label="input-group">
-          <div className="relative">
-            <Form.Root>
-              <InputGroup type="text" placeholder="Search..." icon={<MagnifyingGlassIcon />} />
-            </Form.Root>
-          </div>
-        </div>
+        <form>
+          <InputGroup type="text" placeholder="Search..." icon={<MagnifyingGlassIcon />} />
+        </form>
       </div>
 
       <div aria-label="header_profile">
-        <DropDown image={<Image src={ProfilePicture} alt="Dashboard Profile Image" />}>
-          <DropdownMenu.Item className="dropdown_item">New Tab</DropdownMenu.Item>
-          <DropdownMenu.Separator className="dropdown_separator" />
-          <DropdownMenu.Item className="dropdown_item">New Window</DropdownMenu.Item>
-          <DropdownMenu.Separator className="dropdown_separator" />
-          <DropdownMenu.Item className="dropdown_item">New Private Window</DropdownMenu.Item>
-        </DropDown>
+        <DropDown
+          icon={<BellIcon />}
+          options={[
+            { text: 'Notifications', href: '/' },
+            { text: 'Notifications', href: '/' },
+            { text: 'Notifications', href: '/' },
+          ]}
+        />
+        <DropDown
+          // icon={<BellIcon />}
+          image={<Image src={ProfilePicture} />}
+          options={[
+            { icon: <UserIcon />, text: 'Profile', href: '/' },
+            { icon: <Cog8ToothIcon />, text: 'Settings', href: '/' },
+            { icon: <ArrowLeftOnRectangleIcon />, text: 'Logout', href: '/' },
+          ]}
+        />
       </div>
     </nav>
   );

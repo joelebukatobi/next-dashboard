@@ -1,25 +1,22 @@
 import {
   ArrowLeftCircleIcon,
+  ChevronDownIcon,
   DocumentTextIcon,
-  FolderOpenIcon,
+  FolderIcon,
   HomeIcon,
-  PencilSquareIcon,
-  PhotoIcon,
   RectangleGroupIcon,
   SparklesIcon,
-  Square3Stack3DIcon,
-  TagIcon,
   UsersIcon,
-  VideoCameraIcon,
 } from '@heroicons/react/24/solid';
 
 import { MenuItem } from '@/_components/admin/molecules/MenuItem';
 import React from 'react';
+import { Cog8ToothIcon } from '@heroicons/react/24/outline';
 
 export const Sidebar = () => {
   return (
     <div className="admin_sidebar">
-      <a href="/" className="admin_sidebar-logo">
+      <a href="/admin" className="admin_sidebar-logo">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g filter="url(#filter0_b_39_15)">
             <path
@@ -91,39 +88,243 @@ export const Sidebar = () => {
       </a>
       <nav className="admin_sidebar-nav">
         <div aria-label="main-nav">
-          <MenuItem href="/" icon={<HomeIcon />} text="Home" />
+          <nav class="hs-accordion-group" data-hs-accordion-always-open>
+            <ul aria-label="nav-list">
+              <li>
+                <a class="" href="/admin">
+                  <HomeIcon />
+                  Dashboard
+                </a>
+              </li>
+              <li class="hs-accordion" id="account-accordion">
+                <a class="hs-accordion-toggle hs-accordion-active:hover:bg-transparent">
+                  <DocumentTextIcon />
+                  Blog
+                  <ChevronDownIcon className="hs-accordion-active:rotate-180 chevron-down" />
+                </a>
 
-          <MenuItem href="/" icon={<FolderOpenIcon />} text="Projects" />
+                <div
+                  id="account-accordion"
+                  class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden pl-[4rem]"
+                >
+                  <ul aria-label="list-menu">
+                    <hr />
+                    <li>
+                      <a class="" href="/admin/blog/posts">
+                        Posts
+                      </a>
+                    </li>
+                    <li>
+                      <a class="" href="/admin/blog/tags">
+                        Tags
+                      </a>
+                    </li>
+                    <li>
+                      <a class="" href="/admin/blog/categories">
+                        Categories
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="hs-accordion" id="account-accordion">
+                <a class="hs-accordion-toggle hs-accordion-active:hover:bg-transparent">
+                  <RectangleGroupIcon />
+                  Gallery
+                  <ChevronDownIcon className="hs-accordion-active:rotate-180 chevron-down" />
+                </a>
 
-          <MenuItem
-            icon={<DocumentTextIcon />}
-            text="Blog"
-            subMenuItems={[
-              { icon: <PencilSquareIcon />, text: 'Posts', href: '/' },
-              { icon: <Square3Stack3DIcon />, text: 'Categories', href: '/' },
-              { icon: <TagIcon />, text: 'Tags', href: '/' },
-            ]}
-          />
+                <div
+                  id="account-accordion"
+                  class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden pl-[4rem]"
+                >
+                  <ul aria-label="list-menu">
+                    <hr />
+                    <li>
+                      <a class="" href="/admin/gallery/photos">
+                        Photos
+                      </a>
+                    </li>
+                    <li>
+                      <a class="" href="/admin/gallery/videos">
+                        Videos
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a class="" href="/admin/projects">
+                  <FolderIcon />
+                  Projects
+                </a>
+              </li>
+              <li>
+                <a class="" href="/admin/reviews">
+                  <SparklesIcon />
+                  Reviews
+                </a>
+              </li>
+              <li>
+                <a class="" href="/admin/users">
+                  <UsersIcon />
+                  Users
+                </a>
+              </li>
+              <li>
+                <a class="" href="/admin/settings">
+                  <Cog8ToothIcon />
+                  Settings
+                </a>
+              </li>
+              {/* <li class="hs-accordion" id="account-accordion">
+                <a class="hs-accordion-toggle hs-accordion-active:hover:bg-transparent">
+                  <UsersIcon />
+                  Users
+                  <ChevronDownIcon className="hs-accordion-active:rotate-180 chevron-down" />
+                </a>
 
-          <MenuItem
-            icon={<RectangleGroupIcon />}
-            text="Gallery"
-            subMenuItems={[
-              { icon: <PhotoIcon />, text: 'Images', href: '/' },
-              { icon: <VideoCameraIcon />, text: 'Videos', href: '/' },
-            ]}
-          />
+                <div
+                  id="account-accordion"
+                  class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden pl-[4rem]"
+                >
+                  <ul aria-label="list-menu">
+                    <hr />
+                    <li>
+                      <a class="" href="/admin">
+                        Link 1
+                      </a>
+                    </li>
+                    <li>
+                      <a class="" href="/admin">
+                        Link 2
+                      </a>
+                    </li>
+                    <li>
+                      <a class="" href="/admin">
+                        Link 3
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li> */}
+              {/* <li class="hs-accordion" id="users-accordion">
+                <a class="hs-accordion-toggle hs-accordion-active:hover:bg-transparent" href="javascript:;">
+                  <UsersIcon />
+                  Users
+                  <ChevronDownIcon className="hs-accordion-active:rotate-180 chevron-down" />
+                </a>
 
-          <MenuItem href="/" icon={<SparklesIcon />} text="Reviews" />
+                <div
+                  id="users-accordion"
+                  class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden pl-[4rem]"
+                >
+                  <ul class="hs-accordion-group" data-hs-accordion-always-open>
+                    <li class="hs-accordion" id="users-accordion-sub-1">
+                      <a class="hs-accordion-toggle hs-accordion-active:hover:bg-transparent " href="javascript:;">
+                        Sub Menu 1
+                        <ChevronDownIcon className="hs-accordion-active:rotate-180 chevron-down" />
+                      </a>
 
-          <MenuItem href="/" icon={<UsersIcon />} text="Users" />
+                      <div
+                        id="users-accordion-sub-1"
+                        class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden"
+                      >
+                        <ul class="">
+                          <li>
+                            <a class="" href="javascript:;">
+                              Link 1
+                            </a>
+                          </li>
+                          <li>
+                            <a class="" href="javascript:;">
+                              Link 2
+                            </a>
+                          </li>
+                          <li>
+                            <a class="" href="javascript:;">
+                              Link 3
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="hs-accordion" id="users-accordion-sub-2">
+                      <a class="hs-accordion-toggle hs-accordion-active:hover:bg-transparent " href="javascript:;">
+                        Sub Menu 2
+                        <ChevronDownIcon className="hs-accordion-active:rotate-180 chevron-down" />
+                      </a>
+
+                      <div
+                        id="users-accordion-sub-2"
+                        class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden pl-2"
+                      >
+                        <ul class="">
+                          <li>
+                            <a class="" href="javascript:;">
+                              Link 1
+                            </a>
+                          </li>
+                          <li>
+                            <a class="" href="javascript:;">
+                              Link 2
+                            </a>
+                          </li>
+                          <li>
+                            <a class="" href="javascript:;">
+                              Link 3
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li> */}
+              {/* <li class="hs-accordion" id="account-accordion">
+                <a class="hs-accordion-toggle hs-accordion-active:hover:bg-transparent">
+                  <Cog8ToothIcon />
+                  Settings
+                  <ChevronDownIcon className="hs-accordion-active:rotate-180 chevron-down" />
+                </a>
+
+                <div
+                  id="account-accordion"
+                  class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden pl-[4rem]"
+                >
+                  <ul aria-label="list-menu">
+                    <hr />
+                    <li>
+                      <a class="" href="/admin">
+                        Link 1
+                      </a>
+                    </li>
+                    <li>
+                      <a class="" href="/admin">
+                        Link 2
+                      </a>
+                    </li>
+                    <li>
+                      <a class="" href="/admin">
+                        Link 3
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li> */}
+            </ul>
+          </nav>
         </div>
 
-        <div aria-label="nav-logout">
-          <a href="/login.html" className="admin_sidebar-nav--item">
-            <ArrowLeftCircleIcon />
-            <span> Logout </span>
-          </a>
+        <div aria-label="main-logout">
+          <ul aria-label="nav-list">
+            <li>
+              <a class="" href="/">
+                <ArrowLeftCircleIcon />
+                Logout
+              </a>
+            </li>
+          </ul>
         </div>
       </nav>
     </div>
