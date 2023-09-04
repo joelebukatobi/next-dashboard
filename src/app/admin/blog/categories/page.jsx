@@ -10,6 +10,9 @@ import { PlusIcon } from '@heroicons/react/24/solid';
 import { BreadCrumb } from '@/_components/admin/organisms/BreadCrumb';
 import { Button } from '@/_components/admin/atoms/Button';
 
+// Utils
+import { categories } from '@/_utils/categories';
+
 export default function Categories() {
   //
   const router = useRouter();
@@ -28,19 +31,19 @@ export default function Categories() {
               <tr>
                 <th>Item</th>
                 <th>Name</th>
-                <th>Published</th>
                 <th>Author</th>
+                <th>Published</th>
                 <th>Edit</th>
               </tr>
             </thead>
             <tbody>
-              {categories.map(({ id, published, author, name }) => (
-                <tr key={id}>
+              {categories.map(({ id, published, author, name, slug }) => (
+                <tr onClick={() => router.push(`/admin/blog/categories/${slug}`)} key={id}>
                   <td>{id}</td>
                   <td>{name}</td>
-                  <td>{published}</td>
                   <td>{author}</td>
-                  <td>
+                  <td>{published}</td>
+                  <td onClick={() => router.push(`/admin/blog/categories/${slug}`)}>
                     <PencilSquareIcon />
                   </td>
                 </tr>

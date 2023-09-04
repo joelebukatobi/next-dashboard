@@ -63,7 +63,7 @@ textarea {
 
 //Select
 select {
-  @apply w-full rounded-[.4rem] border-gray-200 border-[.1rem] h-[4rem] px-[1.6rem] pr-[3.2rem] bg-transparent text-gray-400 appearance-none relative z-[2];
+  @apply w-full rounded-[.4rem] border-gray-200 border-[.1rem] h-[4rem] px-[1.6rem] pr-[3.2rem] bg-transparent appearance-none relative z-[2];
   // Select Hover
   &:hover {
     @apply border-blue-500 border-[.24rem];
@@ -75,6 +75,16 @@ select {
   // Select Active
   &:active {
     @apply focus:outline-none;
+  }
+}
+
+.select {
+  @apply relative flex items-center;
+  //
+  & svg {
+    @apply absolute end-[1.6rem] hover:stroke-0;
+    height: 1.6rem !important;
+    width: 1.6rem !important;
   }
 }
 
@@ -92,7 +102,7 @@ table {
   & tbody {
     @apply divide-y-[.1rem] divide-blue-100;
     & tr {
-      @apply odd:bg-gray-50 hover:bg-blue-50;
+      @apply odd:bg-gray-50 hover:bg-blue-50 cursor-pointer;
       & td {
         @apply whitespace-nowrap px-[.4rem] py-[.8rem]  text-gray-800;
         & svg {

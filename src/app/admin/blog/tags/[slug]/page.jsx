@@ -2,15 +2,15 @@
 import React from 'react';
 
 // Components
-import { Button } from '@/_components/admin/atoms/Button';
-import { BreadCrumb } from '@/_components/admin/organisms/BreadCrumb';
 import { PlusIcon } from '@heroicons/react/24/solid';
+import { BreadCrumb } from '@/_components/admin/organisms/BreadCrumb';
+import { Button } from '@/_components/admin/atoms/Button';
 
-export default function NewCategory() {
+export default function EditTag() {
   return (
     <>
       <header>
-        <BreadCrumb name="categories" menu="blog" />
+        <BreadCrumb name="tags" menu="blog" />
         <Button icon={<PlusIcon />}>Publish</Button>
       </header>
       <div aria-label="body-main">
@@ -19,7 +19,7 @@ export default function NewCategory() {
             <div aria-label="input-group">
               <label for="title">Name</label>
               <div class="relative">
-                <input type="text" placeholder="Enter category name" />
+                <input type="text" placeholder="Enter tag name" />
               </div>
             </div>
             <div aria-label="input-group">

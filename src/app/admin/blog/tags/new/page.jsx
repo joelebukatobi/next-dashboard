@@ -17,7 +17,30 @@ export default function NewTag() {
         <Button icon={<PlusIcon />}>Create</Button>
       </header>
 
-      <div aria-label="body-main"></div>
+      <div aria-label="body-main">
+        <form action="">
+          <div aria-label="form-row">
+            <div aria-label="input-group">
+              <label for="title">Name</label>
+              <div class="relative">
+                <input type="text" placeholder="Enter tag name" />
+              </div>
+            </div>
+            <div aria-label="input-group">
+              <label for="author">Author</label>
+              <div class="relative">
+                <input type="text" placeholder="Joel Onwuanaku" />
+              </div>
+            </div>
+          </div>
+          <div aria-label="form-row">
+            <div aria-label="input-group">
+              <label for="description">Description</label>
+              <textarea placeholder="Blog post description" id="description"></textarea>
+            </div>
+          </div>
+        </form>
+      </div>
     </>
   );
 }

@@ -13,7 +13,7 @@ import { Button } from '@/_components/admin/atoms/Button';
 import { categories } from '@/_utils/categories';
 import { Select } from '@/_components/admin/atoms/Select';
 
-export default function NewPost() {
+export default function EditPost() {
   //
   const router = useRouter();
   return (
@@ -50,7 +50,7 @@ export default function NewPost() {
               <div class="relative">
                 <Select>
                   <option value="">Please select category</option>
-                  {categories.map(({ id, published, author, name }) => (
+                  {categories.map(({ id, name }) => (
                     <option value={name} key={id}>
                       {name}
                     </option>

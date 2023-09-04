@@ -2,11 +2,11 @@
 import React from 'react';
 
 // Components
-import { Button } from '@/_components/admin/atoms/Button';
-import { BreadCrumb } from '@/_components/admin/organisms/BreadCrumb';
 import { PlusIcon } from '@heroicons/react/24/solid';
+import { BreadCrumb } from '@/_components/admin/organisms/BreadCrumb';
+import { Button } from '@/_components/admin/atoms/Button';
 
-export default function NewCategory() {
+export default function EditCategory() {
   return (
     <>
       <header>

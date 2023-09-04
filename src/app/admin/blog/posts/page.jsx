@@ -11,6 +11,7 @@ import { Button } from '@/_components/admin/atoms/Button';
 
 // Utils
 import { posts } from '@/_utils/posts';
+import Link from 'next/link';
 
 export default function Posts() {
   //
@@ -38,15 +39,15 @@ export default function Posts() {
               </tr>
             </thead>
             <tbody>
-              {posts.map(({ id, title, published, author, tags, category }) => (
-                <tr key={id}>
+              {posts.map(({ id, title, published, author, tags, category, slug }) => (
+                <tr key={id} onClick={() => router.push(`/admin/blog/posts/${slug}`)}>
                   <td>{id}</td>
                   <td>{title.length > 40 ? `${title.substring(0, 40)}...` : title}</td>
                   <td>{tags.join(', ')}</td>
                   <td>{category}</td>
                   <td>{author}</td>
                   <td>{published}</td>
-                  <td>
+                  <td onClick={() => router.push(`/admin/blog/posts/${slug}`)}>
                     <PencilSquareIcon />
                   </td>
                 </tr>

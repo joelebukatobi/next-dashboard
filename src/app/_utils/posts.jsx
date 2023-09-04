@@ -19,6 +19,7 @@ export const posts = [
     description: 'Learn how to build a responsive website from scratch.',
     image: 'https://placehold.co/600x400/png',
     author: 'Sarah Anderson',
+    slug: 'creating-a-responsive-website', // Added slug based on title
   },
   {
     id: 2,
@@ -40,6 +41,7 @@ export const posts = [
     description: "A beginner's guide to data analysis using Python.",
     image: 'https://placehold.co/600x400/png',
     author: 'John Smith',
+    slug: 'introduction-to-data-analysis-with-python', // Added slug based on title
   },
   {
     id: 3,
@@ -59,6 +61,7 @@ export const posts = [
     description: 'Explore the world of cross-platform mobile app development.',
     image: 'https://placehold.co/600x400/png',
     author: 'Emma Wilson',
+    slug: 'building-cross-platform-mobile-apps-with-react-native', // Added slug based on title
   },
   {
     id: 4,
@@ -79,6 +82,7 @@ export const posts = [
     description: 'Design principles for creating user-friendly interfaces.',
     image: 'https://placehold.co/600x400/png',
     author: 'Daniel White',
+    slug: 'creating-user-centric-designs', // Added slug based on title
   },
   {
     id: 5,
@@ -95,6 +99,7 @@ export const posts = [
     description: 'Learn the basics of game development using Unity.',
     image: 'https://placehold.co/600x400/png',
     author: 'Sophie Davis',
+    slug: 'getting-started-with-unity-game-development', // Added slug based on title
   },
   {
     id: 6,
@@ -111,6 +116,7 @@ export const posts = [
     description: 'An introduction to deep learning techniques and applications.',
     image: 'https://placehold.co/600x400/png',
     author: 'Matthew Johnson',
+    slug: 'deep-learning-fundamentals', // Added slug based on title
   },
   {
     id: 8,
@@ -123,6 +129,7 @@ export const posts = [
     description: 'Scalability and performance in backend development with Node.js.',
     image: 'https://placehold.co/600x400/png',
     author: 'Oliver Clark',
+    slug: 'building-scalable-backend-services-with-node-js', // Added slug based on title
   },
   {
     id: 9,
@@ -135,6 +142,7 @@ export const posts = [
     description: 'Basic principles and practices of cybersecurity.',
     image: 'https://placehold.co/600x400/png',
     author: 'Eva Martinez',
+    slug: 'essentials-of-cybersecurity', // Added slug based on title
   },
   {
     id: 10,
@@ -147,5 +155,6 @@ export const posts = [
     description: 'Utilizing AWS services for cloud computing solutions.',
     image: 'https://placehold.co/600x400/png',
     author: 'Alex Turner',
+    slug: 'cloud-computing-with-amazon-web-services', // Added slug based on title
   },
 ];

@@ -6,16 +6,28 @@ export default function Index() {
   return (
     <>
       <div aria-label="body-row">
-        <Card href="/" icon={<DocumentTextIcon />} heading="12 Posts" caption="Unleash creative content" number="01" />
         <Card
-          href="/"
+          href="/admin/blog/posts"
+          icon={<DocumentTextIcon />}
+          heading="12 Posts"
+          caption="Unleash creative content"
+          number="01"
+        />
+        <Card
+          href="/admin/blog/categories"
           icon={<Square3Stack3DIcon />}
           heading="5 Categories"
           caption="Unleash creative content"
           number="01"
         />
-        <Card href="/" icon={<TagIcon />} heading="8 Tags" caption="Organize like a pro." number="03" />
-        <Card href="/" icon={<UsersIcon />} heading="3 Users" caption="Collaborate and conquer." number="04" />
+        <Card href="/admin/blog/tags" icon={<TagIcon />} heading="8 Tags" caption="Organize like a pro." number="03" />
+        <Card
+          href="/admin/users"
+          icon={<UsersIcon />}
+          heading="3 Users"
+          caption="Collaborate and conquer."
+          number="04"
+        />
       </div>
       <header>
         <nav>

@@ -37,13 +37,13 @@ export default function Tags() {
               </tr>
             </thead>
             <tbody>
-              {tags.map(({ id, published, author, name }) => (
-                <tr key={id}>
+              {tags.map(({ id, published, author, name, slug }) => (
+                <tr onClick={() => router.push(`/admin/blog/tags/${slug}`)} key={id}>
                   <td>{id}</td>
                   <td>{name}</td>
                   <td>{author}</td>
                   <td>{published}</td>
-                  <td>
+                  <td onClick={() => router.push(`/admin/blog/tags/${slug}`)}>
                     <PencilSquareIcon />
                   </td>
                 </tr>

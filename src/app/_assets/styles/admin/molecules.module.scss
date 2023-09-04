@@ -33,7 +33,7 @@
     //
     & div {
       //
-      @apply relative flex items-center h-[4rem];
+      @apply relative;
       & input {
         @apply w-full;
         //
@@ -47,10 +47,6 @@
       //
       & svg {
         @apply h-[2rem] w-[2rem] stroke-gray-400 hover:stroke-2 hover:stroke-blue-600;
-      }
-
-      & .select-chevron {
-        @apply absolute end-[1.6rem] h-[1.2rem] w-[1.2rem] hover:stroke-0;
       }
     }
   }
