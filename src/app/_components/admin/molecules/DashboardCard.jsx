@@ -1,4 +1,4 @@
-export const Card = ({ heading, caption, icon, number, href }) => {
+export const DashboardCard = ({ heading, caption, icon, number, href }) => {
   return (
     <div aria-label="card">
       <a href={href}>

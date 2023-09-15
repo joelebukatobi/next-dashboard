@@ -16,6 +16,12 @@ export const BreadCrumb = ({ name, menu }) => {
           <ChevronRightIcon />
         </li>
         <li>
+          <a href={`/admin`}>{menu} </a>
+        </li>
+        <li>
+          <ChevronRightIcon />
+        </li>
+        <li>
           <a href={`/admin/${menu}/${name}`}> {name} </a>
         </li>
       </ol>

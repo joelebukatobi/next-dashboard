@@ -1,4 +1,4 @@
-import { Card } from '@/_components/admin/molecules/Card';
+import { DashboardCard } from '@/_components/admin/molecules/DashboardCard';
 import { DocumentTextIcon, Square3Stack3DIcon, TagIcon, UsersIcon } from '@heroicons/react/24/solid';
 import { PencilSquareIcon } from '@heroicons/react/24/outline';
 
@@ -6,22 +6,28 @@ export default function Index() {
   return (
     <>
       <div aria-label="body-row">
-        <Card
+        <DashboardCard
           href="/admin/blog/posts"
           icon={<DocumentTextIcon />}
           heading="12 Posts"
           caption="Unleash creative content"
           number="01"
         />
-        <Card
+        <DashboardCard
           href="/admin/blog/categories"
           icon={<Square3Stack3DIcon />}
           heading="5 Categories"
           caption="Unleash creative content"
           number="01"
         />
-        <Card href="/admin/blog/tags" icon={<TagIcon />} heading="8 Tags" caption="Organize like a pro." number="03" />
-        <Card
+        <DashboardCard
+          href="/admin/blog/tags"
+          icon={<TagIcon />}
+          heading="8 Tags"
+          caption="Organize like a pro."
+          number="03"
+        />
+        <DashboardCard
           href="/admin/users"
           icon={<UsersIcon />}
           heading="3 Users"

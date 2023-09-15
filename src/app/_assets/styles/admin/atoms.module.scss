@@ -1,6 +1,5 @@
 // Button
-button,
-button[type='button'] {
+button {
   @apply h-[4rem] flex items-center justify-center gap-[.96rem] rounded-[.4rem] border-[.1rem] border-blue-600 bg-blue-600 px-[1.6rem] py-[1.6rem] text-white transition duration-300 text-[1.4rem];
   //
   & svg {
