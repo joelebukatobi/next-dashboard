@@ -5,6 +5,8 @@ import React from 'react';
 import { PlusIcon } from '@heroicons/react/24/solid';
 import { BreadCrumb } from '@/_components/admin/organisms/BreadCrumb';
 import { Button } from '@/_components/admin/atoms/Button';
+import { InputGroup } from '@/_components/admin/molecules/InputGroup';
+import { TextareaGroup } from '@/_components/admin/molecules/TextareaGroup';
 
 export default function EditTag() {
   return (
@@ -16,24 +18,31 @@ export default function EditTag() {
       <div aria-label="body-main">
         <form action="">
           <div aria-label="form-row">
-            <div aria-label="input-group">
-              <label for="title">Name</label>
-              <div class="relative">
-                <input type="text" placeholder="Enter tag name" />
-              </div>
-            </div>
-            <div aria-label="input-group">
-              <label for="author">Author</label>
-              <div class="relative">
-                <input type="text" placeholder="Joel Onwuanaku" />
-              </div>
-            </div>
+            <InputGroup
+              label="Name"
+              name="name"
+              type="name"
+              id="name"
+              placeholder="Enter tag name"
+              required="required"
+            />
+            <InputGroup
+              label="Author"
+              name="author"
+              type="author"
+              id="author"
+              placeholder="Joel Onwuanaku"
+              required="required"
+            />
           </div>
           <div aria-label="form-row">
-            <div aria-label="input-group">
-              <label for="description">Description</label>
-              <textarea placeholder="Blog post description" id="description"></textarea>
-            </div>
+            <TextareaGroup
+              label="Description"
+              name="description"
+              id="description"
+              placeholder="Enter the description of this tag"
+              required="required"
+            />
           </div>
         </form>
       </div>

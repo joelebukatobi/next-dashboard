@@ -101,9 +101,24 @@ table {
   & tbody {
     @apply divide-y-[.1rem] divide-blue-100;
     & tr {
-      @apply odd:bg-gray-50 hover:bg-blue-50 cursor-pointer;
+      @apply odd:bg-gray-50  cursor-pointer;
+
+      &:hover {
+        @apply bg-blue-600 rounded-[.4rem];
+        & td {
+          @apply text-white font-medium;
+
+          & svg {
+            @apply stroke-white;
+          }
+        }
+      }
       & td {
         @apply whitespace-nowrap px-[.4rem] py-[.8rem]  text-gray-800;
+
+        &:first-of-type {
+          @apply pl-[1.2rem];
+        }
         & svg {
           @apply h-[2.4rem] w-[2.4rem] p-[.2rem] stroke-gray-800 hover:stroke-blue-600 hover:cursor-pointer;
         }

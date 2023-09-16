@@ -1,7 +1,7 @@
 .admin {
   // Card
   div[aria-label='card'] {
-    @apply rounded-xl p-[1.6rem] shadow-sm w-1/3 bg-white;
+    @apply rounded-xl p-[1.6rem] shadow-sm w-full bg-white;
     & a {
       @apply relative flex items-start justify-between;
     }
@@ -23,6 +23,25 @@
     }
     & span {
       @apply rounded-full bg-blue-50 px-[.8rem] py-[.4rem] text-[1.4rem] font-medium text-blue-600;
+    }
+
+    &:hover {
+      @apply bg-blue-600;
+
+      & div {
+        & svg {
+          @apply fill-white;
+        }
+
+        & h5,
+        & p {
+          @apply text-white;
+        }
+      }
+
+      & span {
+        @apply bg-white;
+      }
     }
   }
   // Input Group
@@ -125,6 +144,50 @@
 
       & hr {
         @apply bg-gray-500 my-[.4rem] outline-none h-[.1rem];
+      }
+    }
+  }
+  // PhotoCard
+  div[aria-label='photo-card'] {
+    @apply bg-white p-[.8rem] rounded-[.8rem] shadow-sm border-[.16rem] border-gray-100 relative;
+
+    & figure {
+      @apply space-y-[.8rem];
+      & div {
+        @apply w-full relative flex items-center justify-center;
+        //
+        & img {
+          @apply h-full w-full rounded-t-[.4rem];
+        }
+        //
+        & svg {
+          @apply h-[3.2rem] w-[3.2rem] hidden absolute fill-white z-[200];
+        }
+      }
+
+      & figcaption {
+        //
+        & p {
+          &:first-of-type {
+            @apply font-semibold text-black;
+          }
+          @apply text-gray-600;
+        }
+      }
+    }
+
+    &:hover {
+      @apply border-[.16rem] shadow-md border-blue-600 shadow-blue-600/50 cursor-pointer;
+      & figure {
+        & div {
+          &::after {
+            @apply absolute top-0 left-0 h-full w-full z-[100] bg-blue-600/75 content-[''];
+          }
+          //
+          & svg {
+            @apply block;
+          }
+        }
       }
     }
   }

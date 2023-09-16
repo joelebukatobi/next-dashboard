@@ -5,9 +5,11 @@ import React from 'react';
 import { useRouter } from 'next/navigation';
 
 // Components
-import { ChevronDownIcon, PlusIcon } from '@heroicons/react/24/solid';
+import { PlusIcon } from '@heroicons/react/24/solid';
 import { BreadCrumb } from '@/_components/admin/organisms/BreadCrumb';
 import { Button } from '@/_components/admin/atoms/Button';
+import { InputGroup } from '@/_components/admin/molecules/InputGroup';
+import { TextareaGroup } from '@/_components/admin/molecules/TextareaGroup';
 
 // Utils
 import { categories } from '@/_utils/categories';
@@ -25,26 +27,32 @@ export default function EditPost() {
       <div aria-label="body-main">
         <form action="">
           <div aria-label="form-row">
-            <div aria-label="input-group">
-              <label for="title">Title</label>
-              <div class="relative">
-                <input type="text" placeholder="Enter post title" />
-              </div>
-            </div>
-            <div aria-label="input-group">
-              <label for="image">Image</label>
-              <div class="relative">
-                <input type="file" placeholder="Upload an image" />
-              </div>
-            </div>
+            <InputGroup
+              label="Title"
+              name="title"
+              type="text"
+              id="title"
+              placeholder="Enter post title"
+              required="required"
+            />
+            <InputGroup
+              label="Image"
+              name="image"
+              type="file"
+              id="image"
+              placeholder="Upload a thumbnail image for the post or drop a url"
+              required="required"
+            />
           </div>
           <div aria-label="form-row">
-            <div aria-label="input-group">
-              <label for="author">Author</label>
-              <div class="relative">
-                <input type="text" placeholder="Joel Onwuanaku" />
-              </div>
-            </div>
+            <InputGroup
+              label="Author"
+              name="author"
+              type="text"
+              id="author"
+              placeholder="Joel Onwuanaku"
+              required="required"
+            />
             <div aria-label="input-group">
               <label for="categories">Categories</label>
               <div class="relative">
@@ -58,18 +66,24 @@ export default function EditPost() {
                 </Select>
               </div>
             </div>
-            <div aria-label="input-group">
-              <label for="tags">Tags</label>
-              <div class="relative">
-                <input type="text" placeholder="Enter tags e.g. Web Dev, Cloud Computing, ..." />
-              </div>
-            </div>
+
+            <InputGroup
+              label="Tags"
+              name="tags"
+              type="text"
+              id="tags"
+              placeholder="Enter tags e.g. Web Dev, Cloud Computing, ..."
+              required="required"
+            />
           </div>
           <div aria-label="form-row">
-            <div aria-label="input-group">
-              <label for="description">Description</label>
-              <textarea placeholder="Blog post description" id="description"></textarea>
-            </div>
+            <TextareaGroup
+              label="Description"
+              name="description"
+              id="description"
+              placeholder="Enter the description of this post"
+              required="required"
+            />
           </div>
         </form>
       </div>
