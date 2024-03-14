@@ -1,27 +1,27 @@
+//  React
+'use client';
 import React from 'react';
+
+// Next
+import { useRouter } from 'next/navigation';
+
+// Components
 import { PencilSquareIcon } from '@heroicons/react/24/outline';
+import { PlusIcon } from '@heroicons/react/24/solid';
+import { BreadCrumb } from '@/_components/admin/organisms/BreadCrumb';
 import { Button } from '@/_components/admin/atoms/Button';
-import { ChevronRightIcon, PlusIcon } from '@heroicons/react/24/solid';
+
+// Utils
+import { reviews } from '@/_utils/review';
 
 export default function Reviews() {
   return (
     <>
       <header>
-        <nav>
-          <h6>Reviews</h6>
-          <ol role="list" class="">
-            <li>
-              <a href="/"> Home </a>
-            </li>
-            <li>
-              <ChevronRightIcon />
-            </li>
-            <li>
-              <a href="/admin/reviews"> Reviews </a>
-            </li>
-          </ol>
-        </nav>
-        <Button icon={<PlusIcon />}>Create</Button>
+        <BreadCrumb menu="reviews" />
+        <Button onClick={() => router.push(`/admin/blog/categories/new`)} icon={<PlusIcon />}>
+          Create
+        </Button>
       </header>
       <div aria-label="body-main">
         <div>

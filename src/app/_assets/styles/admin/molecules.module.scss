@@ -84,6 +84,37 @@
       }
     }
   }
+  // Video Form
+  form[aria-label='form-group'] {
+    @apply flex gap-x-[1.6rem];
+    //
+    & div {
+      &[aria-label='form-video'] {
+        @apply w-[45%] h-auto;
+
+        & video {
+          @apply w-full rounded-[.4rem];
+        }
+
+        & img {
+          @apply w-full rounded-[.4rem];
+        }
+      }
+
+      &[aria-label='form-main'] {
+        @apply w-[55%] mt-0 space-y-[1.6rem] h-auto;
+        //
+        input[type='file'] {
+          @apply file:w-[40%];
+        }
+        //
+        textarea {
+          @apply h-[unset];
+        }
+      }
+    }
+    //
+  }
   // Button Row
   div[aria-label='button-row'] {
     @apply flex space-x-[1.6rem];
@@ -186,6 +217,62 @@
           //
           & svg {
             @apply block;
+          }
+        }
+      }
+    }
+  }
+  // VideoCard
+  div[aria-label='video-card'] {
+    @apply bg-white p-[.8rem] rounded-[.8rem] shadow-sm border-[.16rem] border-gray-100 relative;
+
+    & figure {
+      @apply space-y-[.8rem];
+      & div {
+        @apply w-full relative flex items-center justify-center;
+        //
+        & img {
+          @apply h-full w-full rounded-t-[.4rem];
+        }
+        //
+        & svg {
+          @apply h-[3.2rem] w-[3.2rem];
+          &:first-of-type {
+            @apply absolute fill-blue-600 z-[3];
+          }
+          //
+          &:last-of-type {
+            @apply hidden absolute fill-white z-[2];
+          }
+        }
+      }
+
+      & figcaption {
+        //
+        & p {
+          &:first-of-type {
+            @apply font-semibold text-black;
+          }
+          @apply text-gray-600;
+        }
+      }
+    }
+
+    &:hover {
+      @apply border-[.16rem] shadow-md border-blue-600 shadow-blue-600/50 cursor-pointer;
+      & figure {
+        & div {
+          &::after {
+            @apply absolute top-0 left-0 h-full w-full z-[1] bg-blue-600/75 content-[''];
+          }
+          //
+          & svg {
+            &:first-of-type {
+              @apply hidden;
+            }
+            &:last-of-type {
+              @apply block;
+            }
           }
         }
       }

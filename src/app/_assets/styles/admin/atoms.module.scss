@@ -39,6 +39,7 @@ input {
     @apply focus:outline-none;
   }
 }
+//
 input[type='file'] {
   @apply file:bg-transparent file:border-0 pl-0 file:bg-blue-100 file:w-[25%] file:mr-[1.6rem]  file:h-[4rem];
 }
@@ -120,7 +121,7 @@ table {
           @apply pl-[1.2rem];
         }
         & svg {
-          @apply h-[2.4rem] w-[2.4rem] p-[.2rem] stroke-gray-800 hover:stroke-blue-600 hover:cursor-pointer;
+          @apply h-[2.4rem] w-[2.4rem] p-[.2rem] stroke-gray-800 hover:stroke-white hover:cursor-pointer;
         }
       }
     }

@@ -1,9 +1,6 @@
 'use client';
 import React from 'react';
 
-// Next
-import { useRouter } from 'next/navigation';
-
 // Components
 import { PlusIcon } from '@heroicons/react/24/solid';
 import { BreadCrumb } from '@/_components/admin/organisms/BreadCrumb';
@@ -11,31 +8,30 @@ import { Button } from '@/_components/admin/atoms/Button';
 import { InputGroup } from '@/_components/admin/molecules/InputGroup';
 import { TextareaGroup } from '@/_components/admin/molecules/TextareaGroup';
 
-export default function NewPhoto() {
+export default function EditProject() {
   return (
     <>
       <header>
-        <BreadCrumb name="photos" menu="gallery" />
-        <Button icon={<PlusIcon />}>Create</Button>
+        <BreadCrumb menu="project" />
+        <Button icon={<PlusIcon />}>Publish</Button>
       </header>
-
       <div aria-label="body-main">
         <form action="">
           <div aria-label="form-row">
             <InputGroup
-              label="Photo"
-              name="photo"
-              type="file"
-              id="photo"
-              placeholder="Upload a thumbnail photo for the post or drop a url"
+              label="Name"
+              name="name"
+              type="name"
+              id="name"
+              placeholder="Enter project name"
               required="required"
             />
             <InputGroup
-              label="Caption"
-              name="caption"
-              type="text"
-              id="caption"
-              placeholder="Enter the image caption"
+              label="Author"
+              name="author"
+              type="author"
+              id="author"
+              placeholder="Joel Onwuanaku"
               required="required"
             />
           </div>
@@ -44,7 +40,7 @@ export default function NewPhoto() {
               label="Description"
               name="description"
               id="description"
-              placeholder="Enter the description of this image"
+              placeholder="Enter a description for this project description"
               required="required"
             />
           </div>
