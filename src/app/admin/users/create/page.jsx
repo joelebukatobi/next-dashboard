@@ -9,7 +9,7 @@ export default function Reviews() {
       <header>
         <nav>
           <h6>Reviews</h6>
-          <ol role="list" class="">
+          <ol role="list" className="">
             <li>
               <a href="/"> Home </a>
             </li>

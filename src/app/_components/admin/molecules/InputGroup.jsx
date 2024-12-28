@@ -8,7 +8,7 @@ import { Label } from '@/_components/admin/atoms/Label';
 export const InputGroup = ({ name, placeholder, icon, value, type, id, required, label }) => {
   return (
     <div aria-label="input-group">
-      <Label htmlFor="hs-trailing-icon" class="block text-sm font-medium mb-2 dark:text-white">
+      <Label htmlFor="hs-trailing-icon" className="block text-sm font-medium mb-2 dark:text-white">
         {label}
       </Label>
       <div>

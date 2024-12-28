@@ -8,7 +8,7 @@ export const BreadCrumb = ({ name, menu }) => {
   return (
     <nav>
       {name ? <h6>{name}</h6> : <h6>{menu}</h6>}
-      <ol role="list" class="">
+      <ol role="list" className="">
         <li>
           <a href="/admin"> Home </a>
         </li>

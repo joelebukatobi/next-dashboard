@@ -55,7 +55,7 @@ export default function NewPost() {
             />
             <div aria-label="input-group">
               <label for="categories">Categories</label>
-              <div class="relative">
+              <div className="relative">
                 <Select>
                   <option value="">Please select category</option>
                   {categories.map(({ id, name }) => (

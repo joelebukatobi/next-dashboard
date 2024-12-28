@@ -88,16 +88,16 @@ export const Sidebar = () => {
       </a>
       <nav className="admin_sidebar-nav">
         <div aria-label="main-nav">
-          <nav class="hs-accordion-group" data-hs-accordion-always-open>
+          <nav className="hs-accordion-group" data-hs-accordion-always-open>
             <ul aria-label="nav-list">
               <li>
-                <a class="" href="/admin">
+                <a className="" href="/admin">
                   <HomeIcon />
                   Dashboard
                 </a>
               </li>
-              <li class="hs-accordion" id="account-accordion">
-                <a class="hs-accordion-toggle hs-accordion-active:hover:bg-transparent">
+              <li className="hs-accordion" id="account-accordion">
+                <a className="hs-accordion-toggle hs-accordion-active:hover:bg-transparent">
                   <DocumentTextIcon />
                   Blog
                   <ChevronDownIcon className="hs-accordion-active:rotate-180 chevron-down" />
@@ -105,30 +105,30 @@ export const Sidebar = () => {
 
                 <div
                   id="account-accordion"
-                  class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden pl-[4rem]"
+                  className="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden pl-[4rem]"
                 >
                   <ul aria-label="list-menu">
                     <hr />
                     <li>
-                      <a class="" href="/admin/blog/posts">
+                      <a className="" href="/admin/blog/posts">
                         Posts
                       </a>
                     </li>
                     <li>
-                      <a class="" href="/admin/blog/tags">
+                      <a className="" href="/admin/blog/tags">
                         Tags
                       </a>
                     </li>
                     <li>
-                      <a class="" href="/admin/blog/categories">
+                      <a className="" href="/admin/blog/categories">
                         Categories
                       </a>
                     </li>
                   </ul>
                 </div>
               </li>
-              <li class="hs-accordion" id="account-accordion">
-                <a class="hs-accordion-toggle hs-accordion-active:hover:bg-transparent">
+              <li className="hs-accordion" id="account-accordion">
+                <a className="hs-accordion-toggle hs-accordion-active:hover:bg-transparent">
                   <RectangleGroupIcon />
                   Gallery
                   <ChevronDownIcon className="hs-accordion-active:rotate-180 chevron-down" />
@@ -136,17 +136,17 @@ export const Sidebar = () => {
 
                 <div
                   id="account-accordion"
-                  class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden pl-[4rem]"
+                  className="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden pl-[4rem]"
                 >
                   <ul aria-label="list-menu">
                     <hr />
                     <li>
-                      <a class="" href="/admin/gallery/photos">
+                      <a className="" href="/admin/gallery/photos">
                         Photos
                       </a>
                     </li>
                     <li>
-                      <a class="" href="/admin/gallery/videos">
+                      <a className="" href="/admin/gallery/videos">
                         Videos
                       </a>
                     </li>
@@ -154,31 +154,31 @@ export const Sidebar = () => {
                 </div>
               </li>
               <li>
-                <a class="" href="/admin/projects">
+                <a className="" href="/admin/projects">
                   <FolderIcon />
                   Projects
                 </a>
               </li>
               <li>
-                <a class="" href="/admin/reviews">
+                <a className="" href="/admin/reviews">
                   <SparklesIcon />
                   Reviews
                 </a>
               </li>
               <li>
-                <a class="" href="/admin/users">
+                <a className="" href="/admin/users">
                   <UsersIcon />
                   Users
                 </a>
               </li>
               <li>
-                <a class="" href="/admin/settings">
+                <a className="" href="/admin/settings">
                   <Cog8ToothIcon />
                   Settings
                 </a>
               </li>
-              {/* <li class="hs-accordion" id="account-accordion">
-                <a class="hs-accordion-toggle hs-accordion-active:hover:bg-transparent">
+              {/* <li className="hs-accordion" id="account-accordion">
+                <a className="hs-accordion-toggle hs-accordion-active:hover:bg-transparent">
                   <UsersIcon />
                   Users
                   <ChevronDownIcon className="hs-accordion-active:rotate-180 chevron-down" />
@@ -186,30 +186,30 @@ export const Sidebar = () => {
 
                 <div
                   id="account-accordion"
-                  class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden pl-[4rem]"
+                  className="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden pl-[4rem]"
                 >
                   <ul aria-label="list-menu">
                     <hr />
                     <li>
-                      <a class="" href="/admin">
+                      <a className="" href="/admin">
                         Link 1
                       </a>
                     </li>
                     <li>
-                      <a class="" href="/admin">
+                      <a className="" href="/admin">
                         Link 2
                       </a>
                     </li>
                     <li>
-                      <a class="" href="/admin">
+                      <a className="" href="/admin">
                         Link 3
                       </a>
                     </li>
                   </ul>
                 </div>
               </li> */}
-              {/* <li class="hs-accordion" id="users-accordion">
-                <a class="hs-accordion-toggle hs-accordion-active:hover:bg-transparent" href="javascript:;">
+              {/* <li className="hs-accordion" id="users-accordion">
+                <a className="hs-accordion-toggle hs-accordion-active:hover:bg-transparent" href="javascript:;">
                   <UsersIcon />
                   Users
                   <ChevronDownIcon className="hs-accordion-active:rotate-180 chevron-down" />
@@ -217,61 +217,61 @@ export const Sidebar = () => {
 
                 <div
                   id="users-accordion"
-                  class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden pl-[4rem]"
+                  className="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden pl-[4rem]"
                 >
-                  <ul class="hs-accordion-group" data-hs-accordion-always-open>
-                    <li class="hs-accordion" id="users-accordion-sub-1">
-                      <a class="hs-accordion-toggle hs-accordion-active:hover:bg-transparent " href="javascript:;">
+                  <ul className="hs-accordion-group" data-hs-accordion-always-open>
+                    <li className="hs-accordion" id="users-accordion-sub-1">
+                      <a className="hs-accordion-toggle hs-accordion-active:hover:bg-transparent " href="javascript:;">
                         Sub Menu 1
                         <ChevronDownIcon className="hs-accordion-active:rotate-180 chevron-down" />
                       </a>
 
                       <div
                         id="users-accordion-sub-1"
-                        class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden"
+                        className="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden"
                       >
-                        <ul class="">
+                        <ul className="">
                           <li>
-                            <a class="" href="javascript:;">
+                            <a className="" href="javascript:;">
                               Link 1
                             </a>
                           </li>
                           <li>
-                            <a class="" href="javascript:;">
+                            <a className="" href="javascript:;">
                               Link 2
                             </a>
                           </li>
                           <li>
-                            <a class="" href="javascript:;">
+                            <a className="" href="javascript:;">
                               Link 3
                             </a>
                           </li>
                         </ul>
                       </div>
                     </li>
-                    <li class="hs-accordion" id="users-accordion-sub-2">
-                      <a class="hs-accordion-toggle hs-accordion-active:hover:bg-transparent " href="javascript:;">
+                    <li className="hs-accordion" id="users-accordion-sub-2">
+                      <a className="hs-accordion-toggle hs-accordion-active:hover:bg-transparent " href="javascript:;">
                         Sub Menu 2
                         <ChevronDownIcon className="hs-accordion-active:rotate-180 chevron-down" />
                       </a>
 
                       <div
                         id="users-accordion-sub-2"
-                        class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden pl-2"
+                        className="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden pl-2"
                       >
-                        <ul class="">
+                        <ul className="">
                           <li>
-                            <a class="" href="javascript:;">
+                            <a className="" href="javascript:;">
                               Link 1
                             </a>
                           </li>
                           <li>
-                            <a class="" href="javascript:;">
+                            <a className="" href="javascript:;">
                               Link 2
                             </a>
                           </li>
                           <li>
-                            <a class="" href="javascript:;">
+                            <a className="" href="javascript:;">
                               Link 3
                             </a>
                           </li>
@@ -281,8 +281,8 @@ export const Sidebar = () => {
                   </ul>
                 </div>
               </li> */}
-              {/* <li class="hs-accordion" id="account-accordion">
-                <a class="hs-accordion-toggle hs-accordion-active:hover:bg-transparent">
+              {/* <li className="hs-accordion" id="account-accordion">
+                <a className="hs-accordion-toggle hs-accordion-active:hover:bg-transparent">
                   <Cog8ToothIcon />
                   Settings
                   <ChevronDownIcon className="hs-accordion-active:rotate-180 chevron-down" />
@@ -290,22 +290,22 @@ export const Sidebar = () => {
 
                 <div
                   id="account-accordion"
-                  class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden pl-[4rem]"
+                  className="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden pl-[4rem]"
                 >
                   <ul aria-label="list-menu">
                     <hr />
                     <li>
-                      <a class="" href="/admin">
+                      <a className="" href="/admin">
                         Link 1
                       </a>
                     </li>
                     <li>
-                      <a class="" href="/admin">
+                      <a className="" href="/admin">
                         Link 2
                       </a>
                     </li>
                     <li>
-                      <a class="" href="/admin">
+                      <a className="" href="/admin">
                         Link 3
                       </a>
                     </li>
@@ -319,7 +319,7 @@ export const Sidebar = () => {
         <div aria-label="main-logout">
           <ul aria-label="nav-list">
             <li>
-              <a class="" href="/">
+              <a className="" href="/">
                 <ArrowLeftCircleIcon />
                 Logout
               </a>

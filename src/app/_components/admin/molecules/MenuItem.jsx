@@ -8,15 +8,15 @@ import Link from 'next/link';
 
 const MenuItem = ({ icon, text, subMenuItems, href }) => {
   return (
-    <nav class="hs-accordion-group p-6 w-full flex flex-col flex-wrap" data-hs-accordion-always-open>
-      <ul class="space-y-1.5">
+    <nav className="hs-accordion-group p-6 w-full flex flex-col flex-wrap" data-hs-accordion-always-open>
+      <ul className="space-y-1.5">
         <li>
           <a
-            class="flex items-center gap-x-3.5 py-2 px-2.5 bg-gray-100 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-900 dark:text-white"
+            className="flex items-center gap-x-3.5 py-2 px-2.5 bg-gray-100 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-900 dark:text-white"
             href="javascript:;"
           >
             <svg
-              class="w-3.5 h-3.5"
+              className="w-3.5 h-3.5"
               xmlns="http://www.w3.org/2000/svg"
               width="16"
               height="16"
@@ -36,13 +36,13 @@ const MenuItem = ({ icon, text, subMenuItems, href }) => {
           </a>
         </li>
 
-        <li class="hs-accordion" id="users-accordion">
+        <li className="hs-accordion" id="users-accordion">
           <a
-            class="hs-accordion-toggle flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-slate-400 dark:hover:text-slate-300 dark:hs-accordion-active:text-white"
+            className="hs-accordion-toggle flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-slate-400 dark:hover:text-slate-300 dark:hs-accordion-active:text-white"
             href="javascript:;"
           >
             <svg
-              class="w-3.5 h-3.5"
+              className="w-3.5 h-3.5"
               xmlns="http://www.w3.org/2000/svg"
               width="16"
               height="16"
@@ -53,7 +53,7 @@ const MenuItem = ({ icon, text, subMenuItems, href }) => {
             </svg>
             Users
             <svg
-              class="hs-accordion-active:block ml-auto hidden w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+              className="hs-accordion-active:block ml-auto hidden w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
               width="16"
               height="16"
               viewBox="0 0 16 16"
@@ -68,7 +68,7 @@ const MenuItem = ({ icon, text, subMenuItems, href }) => {
               ></path>
             </svg>
             <svg
-              class="hs-accordion-active:hidden ml-auto block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+              className="hs-accordion-active:hidden ml-auto block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
               width="16"
               height="16"
               viewBox="0 0 16 16"
@@ -86,17 +86,17 @@ const MenuItem = ({ icon, text, subMenuItems, href }) => {
 
           <div
             id="users-accordion"
-            class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden"
+            className="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden"
           >
-            <ul class="hs-accordion-group pl-3 pt-2" data-hs-accordion-always-open>
-              <li class="hs-accordion" id="users-accordion-sub-1">
+            <ul className="hs-accordion-group pl-3 pt-2" data-hs-accordion-always-open>
+              <li className="hs-accordion" id="users-accordion-sub-1">
                 <a
-                  class="hs-accordion-toggle flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-slate-400 dark:hover:text-slate-300 dark:hs-accordion-active:text-white"
+                  className="hs-accordion-toggle flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-slate-400 dark:hover:text-slate-300 dark:hs-accordion-active:text-white"
                   href="javascript:;"
                 >
                   Sub Menu 1
                   <svg
-                    class="hs-accordion-active:block ml-auto hidden w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                    className="hs-accordion-active:block ml-auto hidden w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
                     width="16"
                     height="16"
                     viewBox="0 0 16 16"
@@ -111,7 +111,7 @@ const MenuItem = ({ icon, text, subMenuItems, href }) => {
                     ></path>
                   </svg>
                   <svg
-                    class="hs-accordion-active:hidden ml-auto block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                    className="hs-accordion-active:hidden ml-auto block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
                     width="16"
                     height="16"
                     viewBox="0 0 16 16"
@@ -129,12 +129,12 @@ const MenuItem = ({ icon, text, subMenuItems, href }) => {
 
                 <div
                   id="users-accordion-sub-1"
-                  class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden"
+                  className="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden"
                 >
-                  <ul class="pt-2 pl-2">
+                  <ul className="pt-2 pl-2">
                     <li>
                       <a
-                        class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
+                        className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
                         href="javascript:;"
                       >
                         Link 1
@@ -142,7 +142,7 @@ const MenuItem = ({ icon, text, subMenuItems, href }) => {
                     </li>
                     <li>
                       <a
-                        class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
+                        className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
                         href="javascript:;"
                       >
                         Link 2
@@ -150,7 +150,7 @@ const MenuItem = ({ icon, text, subMenuItems, href }) => {
                     </li>
                     <li>
                       <a
-                        class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
+                        className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
                         href="javascript:;"
                       >
                         Link 3
@@ -159,14 +159,14 @@ const MenuItem = ({ icon, text, subMenuItems, href }) => {
                   </ul>
                 </div>
               </li>
-              <li class="hs-accordion" id="users-accordion-sub-2">
+              <li className="hs-accordion" id="users-accordion-sub-2">
                 <a
-                  class="hs-accordion-toggle flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-slate-400 dark:hover:text-slate-300 dark:hs-accordion-active:text-white"
+                  className="hs-accordion-toggle flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-slate-400 dark:hover:text-slate-300 dark:hs-accordion-active:text-white"
                   href="javascript:;"
                 >
                   Sub Menu 2
                   <svg
-                    class="hs-accordion-active:block ml-auto hidden w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                    className="hs-accordion-active:block ml-auto hidden w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
                     width="16"
                     height="16"
                     viewBox="0 0 16 16"
@@ -181,7 +181,7 @@ const MenuItem = ({ icon, text, subMenuItems, href }) => {
                     ></path>
                   </svg>
                   <svg
-                    class="hs-accordion-active:hidden ml-auto block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                    className="hs-accordion-active:hidden ml-auto block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
                     width="16"
                     height="16"
                     viewBox="0 0 16 16"
@@ -199,12 +199,12 @@ const MenuItem = ({ icon, text, subMenuItems, href }) => {
 
                 <div
                   id="users-accordion-sub-2"
-                  class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden pl-2"
+                  className="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden pl-2"
                 >
-                  <ul class="pt-2 pl-2">
+                  <ul className="pt-2 pl-2">
                     <li>
                       <a
-                        class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
+                        className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
                         href="javascript:;"
                       >
                         Link 1
@@ -212,7 +212,7 @@ const MenuItem = ({ icon, text, subMenuItems, href }) => {
                     </li>
                     <li>
                       <a
-                        class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
+                        className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
                         href="javascript:;"
                       >
                         Link 2
@@ -220,7 +220,7 @@ const MenuItem = ({ icon, text, subMenuItems, href }) => {
                     </li>
                     <li>
                       <a
-                        class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
+                        className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
                         href="javascript:;"
                       >
                         Link 3
@@ -233,13 +233,13 @@ const MenuItem = ({ icon, text, subMenuItems, href }) => {
           </div>
         </li>
 
-        <li class="hs-accordion" id="account-accordion">
+        <li className="hs-accordion" id="account-accordion">
           <a
-            class="hs-accordion-toggle flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-slate-400 dark:hover:text-slate-300 dark:hs-accordion-active:text-white"
+            className="hs-accordion-toggle flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-slate-400 dark:hover:text-slate-300 dark:hs-accordion-active:text-white"
             href="javascript:;"
           >
             <svg
-              class="w-3.5 h-3.5"
+              className="w-3.5 h-3.5"
               xmlns="http://www.w3.org/2000/svg"
               width="16"
               height="16"
@@ -254,7 +254,7 @@ const MenuItem = ({ icon, text, subMenuItems, href }) => {
             </svg>
             Account
             <svg
-              class="hs-accordion-active:block ml-auto hidden w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+              className="hs-accordion-active:block ml-auto hidden w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
               width="16"
               height="16"
               viewBox="0 0 16 16"
@@ -269,7 +269,7 @@ const MenuItem = ({ icon, text, subMenuItems, href }) => {
               ></path>
             </svg>
             <svg
-              class="hs-accordion-active:hidden ml-auto block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+              className="hs-accordion-active:hidden ml-auto block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
               width="16"
               height="16"
               viewBox="0 0 16 16"
@@ -287,12 +287,12 @@ const MenuItem = ({ icon, text, subMenuItems, href }) => {
 
           <div
             id="account-accordion"
-            class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden"
+            className="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden"
           >
-            <ul class="pt-2 pl-2">
+            <ul className="pt-2 pl-2">
               <li>
                 <a
-                  class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
+                  className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
                   href="javascript:;"
                 >
                   Link 1
@@ -300,7 +300,7 @@ const MenuItem = ({ icon, text, subMenuItems, href }) => {
               </li>
               <li>
                 <a
-                  class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
+                  className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
                   href="javascript:;"
                 >
                   Link 2
@@ -308,7 +308,7 @@ const MenuItem = ({ icon, text, subMenuItems, href }) => {
               </li>
               <li>
                 <a
-                  class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
+                  className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
                   href="javascript:;"
                 >
                   Link 3
@@ -318,13 +318,13 @@ const MenuItem = ({ icon, text, subMenuItems, href }) => {
           </div>
         </li>
 
-        <li class="hs-accordion" id="projects-accordion">
+        <li className="hs-accordion" id="projects-accordion">
           <a
-            class="hs-accordion-toggle flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-slate-400 dark:hover:text-slate-300 dark:hs-accordion-active:text-white"
+            className="hs-accordion-toggle flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-slate-400 dark:hover:text-slate-300 dark:hs-accordion-active:text-white"
             href="javascript:;"
           >
             <svg
-              class="w-3.5 h-3.5"
+              className="w-3.5 h-3.5"
               xmlns="http://www.w3.org/2000/svg"
               width="16"
               height="16"
@@ -336,7 +336,7 @@ const MenuItem = ({ icon, text, subMenuItems, href }) => {
             </svg>
             Projects
             <svg
-              class="hs-accordion-active:block ml-auto hidden w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+              className="hs-accordion-active:block ml-auto hidden w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
               width="16"
               height="16"
               viewBox="0 0 16 16"
@@ -351,7 +351,7 @@ const MenuItem = ({ icon, text, subMenuItems, href }) => {
               ></path>
             </svg>
             <svg
-              class="hs-accordion-active:hidden ml-auto block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+              className="hs-accordion-active:hidden ml-auto block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
               width="16"
               height="16"
               viewBox="0 0 16 16"
@@ -369,12 +369,12 @@ const MenuItem = ({ icon, text, subMenuItems, href }) => {
 
           <div
             id="projects-accordion"
-            class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden"
+            className="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden"
           >
-            <ul class="pt-2 pl-2">
+            <ul className="pt-2 pl-2">
               <li>
                 <a
-                  class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
+                  className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
                   href="javascript:;"
                 >
                   Link 1
@@ -382,7 +382,7 @@ const MenuItem = ({ icon, text, subMenuItems, href }) => {
               </li>
               <li>
                 <a
-                  class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
+                  className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
                   href="javascript:;"
                 >
                   Link 2
@@ -390,7 +390,7 @@ const MenuItem = ({ icon, text, subMenuItems, href }) => {
               </li>
               <li>
                 <a
-                  class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
+                  className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
                   href="javascript:;"
                 >
                   Link 3
@@ -402,11 +402,11 @@ const MenuItem = ({ icon, text, subMenuItems, href }) => {
 
         <li>
           <a
-            class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:hover:bg-gray-900 dark:text-slate-400 dark:hover:text-slate-300"
+            className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:hover:bg-gray-900 dark:text-slate-400 dark:hover:text-slate-300"
             href="javascript:;"
           >
             <svg
-              class="w-3.5 h-3.5"
+              className="w-3.5 h-3.5"
               xmlns="http://www.w3.org/2000/svg"
               width="16"
               height="16"
@@ -421,11 +421,11 @@ const MenuItem = ({ icon, text, subMenuItems, href }) => {
         </li>
         <li>
           <a
-            class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:hover:bg-gray-900 dark:text-slate-400 dark:hover:text-slate-300"
+            className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:hover:bg-gray-900 dark:text-slate-400 dark:hover:text-slate-300"
             href="javascript:;"
           >
             <svg
-              class="w-3.5 h-3.5"
+              className="w-3.5 h-3.5"
               xmlns="http://www.w3.org/2000/svg"
               width="16"
               height="16"
